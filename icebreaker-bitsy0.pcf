@@ -6,7 +6,7 @@ set_io -nowarn USB_P      43
 set_io -nowarn USB_N      42
 set_io -nowarn USB_DET    38
 
-# RS232 - pin 0 and 1 on the bitsy1
+# RS232 - pin 0 and 1 on the bitsy0
 set_io -nowarn RX         47
 set_io -nowarn TX         44
 

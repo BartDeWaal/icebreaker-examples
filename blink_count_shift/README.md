@@ -26,7 +26,7 @@ To build this example you need to provide which BOARD you want to target.
 
 For example iCEBreaker-bitsy with the Pmod breakout board:
 ```
-make BOARD=bitsy1-pmod prog
+make BOARD=bitsy-pmod prog
 ```
 
 This will synthesize the bitstream using the bitsy verilog file, the correct pcf and launch dfu-util to upload the bitstream to the board.

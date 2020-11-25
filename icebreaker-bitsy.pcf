@@ -1,32 +1,34 @@
-# 12 MHz Clock
+# 12 MHz clock
 set_io -nowarn CLK        35
 
 # USB
+set_io -nowarn USB_P      42
+set_io -nowarn USB_N      38
 set_io -nowarn USB_DET    37
-set_io -nowarn USB_DN     38
-set_io -nowarn USB_DP     42
 
-# Button and LEDs
-set_io -nowarn BTN_n       2
-set_io -nowarn LED_R      25
-set_io -nowarn LED_G       6
+# RS232 - pin 0 and 1 on the bitsy
+set_io -nowarn RX         47
+set_io -nowarn TX         44
+
+# LEDs and Button
+set_io -nowarn BTN_N       2
+set_io -nowarn LEDR_N     25
+set_io -nowarn LEDG_N      6
 
 # RGB LED Driver
-set_io -nowarn RGB[0]     39
-set_io -nowarn RGB[1]     40
-set_io -nowarn RGB[2]     41
+set_io -nowarn LED_RED_N  39
+set_io -nowarn LED_GRN_N  40
+set_io -nowarn LED_BLU_N  41
 
-# QSPI Flash/RAM
-set_io -nowarn SPI_IO0    14
-set_io -nowarn SPI_IO1    17
-set_io -nowarn SPI_IO2    18
-set_io -nowarn SPI_IO3    19
-set_io -nowarn SPI_SCK    15
-set_io -nowarn SPI_CS_n   16
-set_io -nowarn FLASH_CS_n 16
-set_io -nowarn RAM_CS_n    6
+# SPI Flash
+set_io -nowarn FLASH_SCK  15
+set_io -nowarn FLASH_CS   16
+set_io -nowarn FLASH_IO0  14
+set_io -nowarn FLASH_IO1  17
+set_io -nowarn FLASH_IO2  18
+set_io -nowarn FLASH_IO3  19
 
-# GPIO
+# Pins
 set_io -nowarn P0         47
 set_io -nowarn P1         44
 set_io -nowarn P2         48

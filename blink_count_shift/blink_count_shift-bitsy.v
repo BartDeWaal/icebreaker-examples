@@ -7,9 +7,8 @@ module top (
 
 	output LEDG_N,
 
-	output P0,  P1,  P2,  P3,  P4,  P5,  P6,  P7,
-	output P8,  P9,  P10, P11, P12, P13, P14, P15,
-	output P16, P17, P18, P19, P20, P21, P22, P23
+	output P0,  P1,  P2,  P3,  P4,  P5,  P6,  P7,  P8,  P9,  P10, P11, P12,
+	output P13, P14, P15, P16, P17, P18, P19, P20, P21, P22, P23
 );
 
 	localparam BITS = 5;
@@ -45,7 +44,6 @@ module top (
 
 	assign LEDG_N = BTN_N;
 
-	assign {P0,  P1,  P2,  P3,  P4,  P5,  P6,  P7,
-		P8,  P9,  P10, P11, P12, P13, P14, P15,
-		P16, P17, P18, P19, P20, P21, P22, P23} = 1 << (shift % 24);
+	assign {P0,  P1,  P2,  P3,  P4,  P5,  P6,  P7, P8,  P9,  P10, P11, P12,
+		P13, P14, P15, P16, P17, P18, P19, P20, P21, P22, P23} = 1 << (shift % 24);
 endmodule
