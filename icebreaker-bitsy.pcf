@@ -1,34 +1,37 @@
 # 12 MHz clock
 set_io -nowarn CLK        35
 
-# USB
-set_io -nowarn USB_P      42
-set_io -nowarn USB_N      38
+# Onboard USB
 set_io -nowarn USB_DET    37
+set_io -nowarn USB_DN     38
+set_io -nowarn USB_DP     42
 
-# RS232 - pin 0 and 1 on the bitsy
-set_io -nowarn RX         47
-set_io -nowarn TX         44
-
-# LEDs and Button
+# Onboard button and LEDs
 set_io -nowarn BTN_N       2
 set_io -nowarn LEDR_N     25
 set_io -nowarn LEDG_N      6
 
-# RGB LED Driver
-set_io -nowarn LED_RED_N  39
-set_io -nowarn LED_GRN_N  40
-set_io -nowarn LED_BLU_N  41
+# Onboard RGB LED (FPGA LED driver pins)
+set_io -nowarn RGB_R_N    39
+set_io -nowarn RGB_G_N    40
+set_io -nowarn RGB_B_N    41
 
-# SPI Flash
-set_io -nowarn FLASH_SCK  15
-set_io -nowarn FLASH_CS   16
-set_io -nowarn FLASH_IO0  14
-set_io -nowarn FLASH_IO1  17
-set_io -nowarn FLASH_IO2  18
-set_io -nowarn FLASH_IO3  19
+# SPI (FPGA hard IP)
+set_io -nowarn SPI_SO     14
+set_io -nowarn SPI_SI     17
+set_io -nowarn SPI_SCK    15
+set_io -nowarn SPI_CS_N   16
 
-# Pins
+# QSPI for onboard Flash & PSRAM
+set_io -nowarn QSPI_IO0   14
+set_io -nowarn QSPI_IO1   17
+set_io -nowarn QSPI_IO2   18
+set_io -nowarn QSPI_IO3   19
+set_io -nowarn QSPI_SCK   15
+set_io -nowarn FLASH_CS_N 16
+set_io -nowarn PSRAM_CS_N  6
+
+# Pins (Teensy compatible pinout)
 set_io -nowarn P0         47
 set_io -nowarn P1         44
 set_io -nowarn P2         48
@@ -42,6 +45,7 @@ set_io -nowarn P9         12
 set_io -nowarn P10        21
 set_io -nowarn P11        13
 set_io -nowarn P12        20
+# Other side
 set_io -nowarn P13        25
 set_io -nowarn P14        23
 set_io -nowarn P15        27
@@ -53,3 +57,13 @@ set_io -nowarn P20        34
 set_io -nowarn P21        36
 set_io -nowarn P22        43
 set_io -nowarn P23        46
+
+# Convenient aliases for Teensy pinout
+
+# Serial (P0 and P1)
+set_io -nowarn UART_RX    47
+set_io -nowarn UART_TX    44
+
+# I2C (P18 and P19)
+set_io -nowarn I2C_SDA    31
+set_io -nowarn I2C_SCL    32

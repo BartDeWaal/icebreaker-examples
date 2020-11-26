@@ -1,50 +1,62 @@
 # 12 MHz clock
 set_io -nowarn CLK        35
 
-# LEDs and Button
+# Onboard USB
+set_io -nowarn USB_DET    37
+set_io -nowarn USB_DN     38
+set_io -nowarn USB_DP     42
+
+# Onboard button and LEDs
 set_io -nowarn BTN_N       2
 set_io -nowarn LEDR_N     25
 set_io -nowarn LEDG_N      6
 
-# RGB LED Driver
+# Onboard RGB LED (FPGA LED driver pins)
 set_io -nowarn LED_RED_N  39
 set_io -nowarn LED_GRN_N  40
 set_io -nowarn LED_BLU_N  41
 
-# SPI Flash
-set_io -nowarn FLASH_SCK  15
-set_io -nowarn FLASH_CS   16
-set_io -nowarn FLASH_IO0  14
-set_io -nowarn FLASH_IO1  17
-set_io -nowarn FLASH_IO2  18
-set_io -nowarn FLASH_IO3  19
+# SPI (FPGA hard IP)
+set_io -nowarn SPI_SO     14
+set_io -nowarn SPI_SI     17
+set_io -nowarn SPI_SCK    15
+set_io -nowarn SPI_CS_N   16
 
-# PMOD 1
-set_io -nowarn P1_1       47
-set_io -nowarn P1_2       48
-set_io -nowarn P1_3        4
-set_io -nowarn P1_4        9
-set_io -nowarn P1_7       44
-set_io -nowarn P1_8       45
-set_io -nowarn P1_9        3
-set_io -nowarn P1_10      10
+# QSPI for onboard Flash & PSRAM
+set_io -nowarn QSPI_IO0   14
+set_io -nowarn QSPI_IO1   17
+set_io -nowarn QSPI_IO2   18
+set_io -nowarn QSPI_IO3   19
+set_io -nowarn QSPI_SCK   15
+set_io -nowarn FLASH_CS_N 16
+set_io -nowarn PSRAM_CS_N  6
 
-# PMOD 2
-set_io -nowarn P2_1       43
-set_io -nowarn P2_2       32
-set_io -nowarn P2_3       26
-set_io -nowarn P2_4       28
-set_io -nowarn P2_7       36
-set_io -nowarn P2_8       31
-set_io -nowarn P2_9       27
-set_io -nowarn P2_10      34
+# PMOD1
+set_io -nowarn PMOD1_1    47
+set_io -nowarn PMOD1_2    48
+set_io -nowarn PMOD1_3     4
+set_io -nowarn PMOD1_4     9
+set_io -nowarn PMOD1_7    44
+set_io -nowarn PMOD1_8    45
+set_io -nowarn PMOD1_9     3
+set_io -nowarn PMOD1_10   10
 
-# PMOD 3
-set_io -nowarn P3_1       23
-set_io -nowarn P3_2       12
-set_io -nowarn P3_3       13
-set_io -nowarn P3_4       11
-set_io -nowarn P3_7       25
-set_io -nowarn P3_8       21
-set_io -nowarn P3_9       20
-set_io -nowarn P3_10      46
+# PMOD2
+set_io -nowarn PMOD2_1    43
+set_io -nowarn PMOD2_2    32
+set_io -nowarn PMOD2_3    26
+set_io -nowarn PMOD2_4    28
+set_io -nowarn PMOD2_7    36
+set_io -nowarn PMOD2_8    31
+set_io -nowarn PMOD2_9    27
+set_io -nowarn PMOD2_10   34
+
+# PMOD3
+set_io -nowarn PMOD3_1    23
+set_io -nowarn PMOD3_2    12
+set_io -nowarn PMOD3_3    13
+set_io -nowarn PMOD3_4    11
+set_io -nowarn PMOD3_7    25
+set_io -nowarn PMOD3_8    21
+set_io -nowarn PMOD3_9    20
+set_io -nowarn PMOD3_10   46
